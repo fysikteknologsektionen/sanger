@@ -9,6 +9,7 @@ git add .
 git commit -m "Auto-deployed database"
 git push origin master
 git reset --hard overleaf/master
+git pull overleaf master
 rm -f *
 cp ../../Sangtexter/* .
 rm deploy.sh
@@ -28,6 +29,7 @@ git add .
 git commit -m "Auto-deployed database"
 git push origin master
 git reset --hard overleaf/master
+git pull overleaf master
 rm -f *
 cp ../../Sangtexter/* .
 rm deploy.sh
