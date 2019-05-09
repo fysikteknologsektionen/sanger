@@ -1,19 +1,18 @@
 #!/bin/bash
-rm -f ../Sanghafte/texter/*
-cp * ../Sanghafte/texter/
-rm -f ../Sjungbok/texter/*
-cp * ../Sjungbok/texter/
-
 cd ../Sanghafte/texter/
+rm -f *
+cp ../../Sangtexter/* .
 rm deploy.sh
 rm install.sh
-git commit -ma "Auto-deployed database"
-git push master origin
-git push master overleaf
-
-cd ../../Sjungbok/texter/
+git add *
+git commit -m "Auto-deployed database"
+git push origin master
+git reset --hard overleaf/master
+rm -f *
+cp ../../Sangtexter/* .
 rm deploy.sh
 rm install.sh
-git commit -ma "Auto-deployed database"
-git push master origin
-git push master overleaf
+git add *
+git commit -m "Auto-deployed database"
+git push overleaf master
+git reset --hard origin/master
