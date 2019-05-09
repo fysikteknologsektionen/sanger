@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 # Sånghäfte
 cd ../Sanghafte/texter/
 rm -f *
@@ -8,6 +9,7 @@ rm install.sh
 git add .
 git commit -m "Auto-deployed database"
 git push origin master
+git fetch overleaf
 git reset --hard overleaf/master
 git pull overleaf master
 rm -f *
@@ -28,6 +30,7 @@ rm install.sh
 git add .
 git commit -m "Auto-deployed database"
 git push origin master
+git fetch overleaf
 git reset --hard overleaf/master
 git pull overleaf master
 rm -f *

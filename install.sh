@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 cd ..
 git clone https://github.com/Fysikteknologsektionen/Sanghafte.git
 git clone https://github.com/Fysikteknologsektionen/Sjungbok.git
