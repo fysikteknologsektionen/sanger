@@ -6,8 +6,12 @@ Sångtexter till sånghäftet och sjungboken.
   Skicka texter till sångförmännen så löser vi det.
 
 ### Sångförmän:
-  1. Klona till Sangtexter ett lokalt repo. 
+  1. Klona till Sangtexter ett lokalt repo med 'git clone [url]' om du inte redan gjort det. 
   2. Gör förändringarna
-  3. Kör install.sh
-  4. Kör deploy.sh
+  3. 'git add -A'
+  4. 'git commit -m "skriv ett commitmeddelande"
+  5. 'git pull'
+  6. 'git push'
+  7. Kör install.sh
+  8. Kör deploy.sh
   
