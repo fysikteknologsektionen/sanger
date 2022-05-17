@@ -1,0 +1,114 @@
+% För digital användning
+\pdfminorversion=7
+\documentclass[12pt,a4paper,notitlepage,twoside]{article}
+
+\makeatletter
+\def\app@exe{\immediate\write18}
+\def\precompile{%
+\IfFileExists{./output.log}{ % Utför endast om ShareLaTeX
+  \IfFileExists{./sjungboken2.idx}{}% Kör inte make.sh igen när pdflatex kallas i make
+    {
+        \app@exe{chmod +x make.sh}%
+        \app@exe{./make.sh}%
+    }
+  }
+ }{}
+\makeatother
+
+\precompile
+
+\usepackage[utf8]{inputenc}
+\usepackage{formatmall}
+\usepackage[swedish]{babel}
+\usepackage{textfit}
+\usepackage{fancyhdr}
+\usepackage[hang,small,bf]{caption}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+
+% Newpages - enable for book, disable for sanghafte
+\newcommand{\newp}{\newpage}
+
+% Include songs
+\newcommand{\inputsong}[1]{\input{texter/#1.tex}}
+
+\fancyhead[L]{\large Encyclopedia Gasquica}
+\fancyhead[R]{\large F-sektionens sjungbok}
+\fancyfoot[C]{}
+\renewcommand{\footrulewidth}{0.5pt}
+\pagestyle{fancy}
+\makeindex
+%\paperwidth = 10.45 cm
+%\paperheight = 14.85 cm
+%\voffset = 0.41 cm %vertikal offset
+%\hoffset = -2 cm
+%\topmargin = 0 cm %marginal ovanför header
+\headheight = 1 cm %headerhöjd
+%\headsep = 0 cm %mellan header och body
+%\textheight = 13 cm %bodyns höjd
+%\textwidth = 9 cm
+%\oddsidemargin = 0 cm %marginalen på udda sidor
+
+
+\begin{document}
+
+\include{forord}
+
+\setcounter{section}{6}
+\fancyfoot[RO,LE]{\large Sektionssången}
+\include{sektsang}
+
+\setcounter{section}{1}
+\fancyfoot[RO,LE]{\large Folksånger}
+\include{national}
+
+\stepcounter{section}
+\fancyfoot[RO,LE]{\large Snapsvisor}
+\include{snapsvisor}
+
+\stepcounter{section}
+\fancyfoot[RO,LE]{\large Hyfsvisor}
+\include{hyfsvisor}
+
+\stepcounter{section}
+\fancyfoot[RO,LE]{\large Punschvisor}
+\include{punschvisor}
+
+\stepcounter{section}
+\fancyfoot[RO,LE]{\large Øhlvisor}
+\include{ohlvisor}
+
+\stepcounter{section}
+\stepcounter{section} % hoppa över F
+\fancyfoot[RO,LE]{\large Vinvisor}
+\include{vinvisor}
+
+\stepcounter{section}
+\fancyfoot[RO,LE]{\large Bellman}
+\include{bellman}
+
+\stepcounter{section}
+\fancyfoot[RO,LE]{\large Övriga}
+\include{ovriga}
+
+\stepcounter{section}
+\fancyfoot[RO,LE]{\large Julvisor}
+\include{julvisor}
+
+\stepcounter{section}
+\fancyfoot[RO,LE]{\large Djungelvrål}
+\include{djungel}
+
+\stepcounter{section}
+\fancyfoot[RO,LE]{\large Register}
+\include{index}
+
+\stepcounter{section}
+\fancyfoot[RO,LE]{\large Sångförmän}
+\include{sangforman}
+
+\end{document}
