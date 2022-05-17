@@ -7,11 +7,11 @@ echo ${PWD}
 mkdir tmp
 mkdir tmp/sjungbok
 mkdir tmp/sjungbok/bilder
-mkdir tmp/sjungbok/texter
+mkdir tmp/texter
 cp *.tex tmp/sjungbok/.
 cp formatmall.sty tmp/sjungbok/.
 cp bilder/* tmp/sjungbok/bilder/.
-cp texter/* tmp/sjungbok/texter/.
+cp ../texter/* tmp/texter/.
 
 cd tmp/sjungbok
 echo ${PWD}

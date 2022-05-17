@@ -1,17 +1,9 @@
 # Sangtexter
+
 Sångtexter till sånghäftet och sjungboken.
 
 ## Ändringar
-### Icke sångförmän: 
-  Skicka texter till sångförmännen så löser vi det.
 
-### Sångförmän:
-  1. Klona till Sangtexter ett lokalt repo med 'git clone [url]' om du inte redan gjort det. 
-  2. Gör förändringarna
-  3. 'git add -A'
-  4. 'git commit -m "skriv ett commitmeddelande"
-  5. 'git pull'
-  6. 'git push'
-  7. Kör install.sh
-  8. Kör deploy.sh
-  
+Ändrigar görs genom pull-requests, se [GitHubs dokumentation](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).
+
+Förslag på ändringar kan också skickas direkt till sångförmännen så löser de det.
