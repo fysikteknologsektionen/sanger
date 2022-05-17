@@ -1,0 +1,187 @@
+%READ ONLY LÄNK
+%https://www.overleaf.com/read/vpxysyqrtmvs
+% ---------------- %%% A4 konvertering %%% ----------------- %
+% ---------------- %%%    AVANCERAT    %%% ----------------- %
+\documentclass[12pt]{article}
+\usepackage[portrait,a4paper,margin=0cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[swedish]{babel}
+\usepackage{pdfpages}
+\usepackage{filecontents}
+\begin{filecontents*}{config.tex}
+% ---------------------------------------------------------- %
+
+
+% ---------------- %%% FORMATERING %%% ----------------- %
+
+\documentclass[12pt]{article}
+%% Import %%
+\input{pre.tex}
+%% --- %%
+
+
+% -------------- %%% EGNA INSTÄLLNINGAR %%% -------------- %
+
+%% Om något värde ej önskas, lämna måsvingarna tomma %%
+
+%% Storlek på logga %%
+%% Om ingen logga önskas, radera logo.png %%
+\newcommand{\logga}
+{0.8\textwidth}
+%% --- %%
+
+%% Titel %%
+\newcommand{\titel}
+{Titel}
+%% --- %%
+
+%% Värdar/Toastmasters %%
+\newcommand{\host}
+{Värd}
+%% --- %%
+
+%% Meny %%
+\newcommand{\forratt}
+{Förrätt}
+\newcommand{\huvudratt}
+{Huvudrätt}
+\newcommand{\efterratt}
+{Efterrätt}
+%% --- %%
+
+%% Datum %%
+\newcommand{\datum}
+{den \today}
+%% --- %%
+
+%% Melodirad %%
+% Exkludera melodirad (avkommentera om du vill att melodiraden ska gömmas)
+%\renewcommand{\mel}[1]{} % Ingen melodirad
+%% --- %%
+
+%% Repristecken %%
+% Avkommentera båda om du vill byta ut repristecknet mot textekvivalent
+%\renewcommand{\repopen}{//:}
+%\renewcommand{\repclose}{://}
+%% --- %%
+
+% ------------------- %%% DOKUMENT %%% ------------------- %
+
+\begin{document}
+\titelsida
+\inputsong{livet}
+\inputsong{porthos}
+\inputsong{vikingen}
+\inputsong{fetafransyskor}
+\inputsong{bordeaux}
+\inputsong{strejkpapripps}
+\inputsong{gamlakall}
+\newpage
+\inputsong{sistapunschvisan}
+\end{document}
+
+% -------------------------------------------------------- %
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ---------------- %%%     RÖR EJ      %%% ----------------- %
+\end{filecontents*}
+
+\makeatletter
+\def\app@exe{\immediate\write18} % Definiera körbara Linux-kommandon
+\def\createBooklet{%
+    \app@exe{pdflatex config.tex}% Kompilera config.tex som har skapats genom filecontents-paketet
+
+    % Räkna antalet sidor
+    \pdfximage{config.pdf}
+    
+    % Väljer automatiskt rätt layout för antalet sidor
+    
+    % 1-2
+    \ifnum\the\pdflastximagepages=1
+        \includepdf[pages=-,nup=2x1]{config.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=2
+        \includepdf[pages=-,nup=2x1]{config.pdf}
+    \fi
+    
+    % 3-4
+    \ifnum\the\pdflastximagepages=3
+        \includepdf[pages={{},1,2,3},nup=2x1]{config.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=4
+        \includepdf[pages={4,1,2,3},nup=2x1]{config.pdf}
+    \fi
+    
+    % 5-8
+    \ifnum\the\pdflastximagepages=5
+        \includepdf[pages={{},1,2,{},{},3,4,5},nup=2x1]{config.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=6
+        \includepdf[pages={{},1,2,{},6,3,4,5},nup=2x1]{config.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=7
+        \includepdf[pages={{},1,2,7,6,3,4,5},nup=2x1]{config.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=8
+        \includepdf[pages={8,1,2,7,6,3,4,5},nup=2x1]{config.pdf}
+    \fi
+    
+    % 9-12
+    \ifnum\the\pdflastximagepages=9
+        \includepdf[pages={{},1,2,{},{},3,4,9,8,5,6,7},nup=2x1]{config.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=10
+        \includepdf[pages={{},1,2,{},10,3,4,9,8,5,6,7},nup=2x1]{config.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=11
+        \includepdf[pages={{},1,2,11,10,3,4,9,8,5,6,7},nup=2x1]{config.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=12
+        \includepdf[pages={12,1,2,11,10,3,4,9,8,5,6,7},nup=2x1]{config.pdf}
+    \fi
+    
+    % 13-16
+    \ifnum\the\pdflastximagepages=13
+        \includepdf[pages={{},1,2,{},{},3,4,13,12,5,6,11,10,7,8,9},nup=2x1]{config.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=14
+        \includepdf[pages={{},1,2,{},14,3,4,13,12,5,6,11,10,7,8,9},nup=2x1]{config.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=15
+        \includepdf[pages={{},1,2,15,14,3,4,13,12,5,6,11,10,7,8,9},nup=2x1]{config.pdf}
+    \fi
+    \ifnum\the\pdflastximagepages=16
+        \includepdf[pages={16,1,2,15,14,3,4,13,12,5,6,11,10,7,8,9},nup=2x1]{config.pdf}
+    \fi
+    
+}
+\makeatother
+
+\begin{document}
+\createBooklet
+\end{document}
