@@ -8,7 +8,7 @@ Detta repo innehåller
 
 ## Använda mallarna
 
-Skapa först en kopia av [Overleaf-projektet](https://www.overleaf.com/read/TODO) till ditt eget Overleafkonto.
+Skapa först en kopia av [Overleaf-projektet](https://www.overleaf.com/read/hfrdcszwfcsy) till ditt eget Overleafkonto.
 
 ### Sånghäftet
 
