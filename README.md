@@ -36,14 +36,16 @@ Det finns olika sätt att göra ändringar (ordnat utifrån smidighet):
 - [Skicka ändrigsförslag direkt till Sångförmännen](mailto:sangforman@ftek.se)
 - Gör en fork av projektet och skapa en pull-request, se [GitHubs dokumentation](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
 
-   1. Skapa en fork av [fysikteknologsektionen/sanger](https://github.com/fysikteknologsektionen/sanger) till din egen användare
+   1. Skapa en fork av [fysikteknologsektionen/sanger](https://github.com/fysikteknologsektionen/sanger) till din egen användare  
+   <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/GitHub_Fork_Button.png" style="max-width: 6em">
    2. Klona din fork till ett lokalt repo med `git clone https://github.com/MinAnvändare/sanger`. OBS: Ändra `MinAnvändare` till ditt GitHub-användarnamn!
    3. Gör förändringarna
    4. `git add -A`
    5. `git commit -m "skriv ett commitmeddelande"`
    6. `git pull`
    7. `git push`
-   8. Skapa en pull-request från din fork till [fysikteknologsektionen/sanger](https://github.com/fysikteknologsektionen/sanger)
+   8. [Skapa en pull-request](https://docs.github.com/articles/creating-a-pull-request) från din fork till [fysikteknologsektionen/sanger](https://github.com/fysikteknologsektionen/sanger)
+   <img src="https://docs.github.com/assets/cb-26570/images/help/pull_requests/pull-request-start-review-button.png" style="max-width: 20em">
    9. Vänta på att infoansvarig godkänner (mergear) din pull-request
 
 **OBS** Ändringar skall inte göras i Overleaf-projektet.
