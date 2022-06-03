@@ -36,6 +36,16 @@ Det finns olika sätt att göra ändringar (ordnat utifrån smidighet):
 - [Skicka ändrigsförslag direkt till Sångförmännen](mailto:sangforman@ftek.se)
 - Gör en fork av projektet och skapa en pull-request, se [GitHubs dokumentation](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
 
+   1. Skapa en fork av [fysikteknologsektionen/sanger](https://github.com/fysikteknologsektionen/sanger) till din egen användare
+   2. Klona din fork till ett lokalt repo med `git clone https://github.com/MinAnvändare/sanger`. OBS: Ändra `MinAnvändare` till ditt GitHub-användarnamn!
+   3. Gör förändringarna
+   4. `git add -A`
+   5. `git commit -m "skriv ett commitmeddelande"`
+   6. `git pull`
+   7. `git push`
+   8. Skapa en pull-request från din fork till [fysikteknologsektionen/sanger](https://github.com/fysikteknologsektionen/sanger)
+   9. Vänta på att infoansvarig godkänner (mergear) din pull-request
+
 **OBS** Ändringar skall inte göras i Overleaf-projektet.
 
 ## För sångförmän
