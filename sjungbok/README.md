@@ -26,7 +26,7 @@ Använd den [senaste versionen](#senaste-versionen) av sjungboken. Filerna `fram
 
 # Kompilera ny version
 
-Börja med att öppna [Overleaf-projektet](https://www.overleaf.com/read/hfrdcszwfcsy). Efter att du vid behov har [synkat Overleaf med GitHub](#synka-overleaf-med-github) (så att ändringar på GitHub syns i Overleaf) kan du följa instruktionerna för en [digital bok](#digital-bok) eller [tryckbar bok](#tryckbar-bok).
+Börja med att öppna [Overleaf-projektet](https://www.overleaf.com/read/xndwjtmxmdnz). Efter att du vid behov har [synkat Overleaf med GitHub](#synka-overleaf-med-github) (så att ändringar på GitHub syns i Overleaf) kan du följa instruktionerna för en [digital bok](#digital-bok) eller [tryckbar bok](#tryckbar-bok).
 
 ## Digital bok
 
