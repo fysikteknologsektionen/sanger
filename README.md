@@ -1,6 +1,6 @@
 # Sånger
 
-Detta repo innehåller
+Detta projekt innehåller
 
 - [Sånghäftet](./sanghafte/) – en LaTeX-mall
 - [Sjungboken](./sjungbok/) – också en LaTeX-mall samt förkompilerade versioner av sjungboken
@@ -8,16 +8,25 @@ Detta repo innehåller
 
 ## Sånghäftet
 
-För att använda sånghäftesmallen, skapa först en kopia av [Overleaf-projektet](https://www.overleaf.com/read/hfrdcszwfcsy) till ditt eget Overleafkonto.
+För att använda sånghäftesmallen, skapa först en kopia av [Overleaf-projektet](https://www.overleaf.com/read/xndwjtmxmdnz) till ditt eget Overleafkonto. Om du inte ser *Copy Project* i sidomenyn, kontrollera att du är inloggad.
+
+### Göra sånghäftet
 
 I din kopia av Overleaf-projektet bör du i dokumentets meny välja att kompilera `sanghafte/main.tex` om det inte redan är förvalt. Det är också i detta dokument du redigerar för att ändra innehållet i sånghäftet:
 
-1. Ändra titel, värdar, meny o.s.v. i `sanghafte/main.tex`
-1. Ändra logga genom att ladda upp en egen fil till `sanghafte/logo.png`
-1. Lägg in dina låtar i ordning med `\inputsong{...}` (vilka sånger som finns tillgängliga ser du i mappen [`texter`](./texter/))
-1. Lägg in `\newpage` om en rubrik fastnar på föregående sida
-1. Kompilera!
-1. Skriv ut (dubbelsidigt längsmed långsidan)!
+1. Ändra titel, värdar, meny o.s.v. i `sanghafte/main.tex`.
+1. Ändra logga genom att ladda upp en egen fil till `sanghafte/logo.png`.
+1. Justera storleken på loggan. Till exempel genom att skriva `0.8\textwidth` för att få bredden på loggan till 80% av textbredden.
+1. Välj om du vill gömma melodiraden under varje sångtitel genom att avkommentera motsvarande kommando.
+1. För att lägga in en sång så skriver du `\inputsong{filnamn}` där filnamnet går att hitta i mappen [`texter`](./texter/). Ordningen på sångerna här bestämmer ordningen i själva sånghäftet.
+1. Lägg in `\newpage` om en rubrik fastnar på föregående sida.
+
+### Skriva ut sånghäftet
+1. Kompilera `sanghafte/main.tex` och spara PDF-filen.
+1. Skriv ut *ett* exemplar av den nya PDF-filen i dubbelsidigt A4 (med vändning längs långsidan) och kolla om det ser bra ut.
+1. Kopiera upp dubbelsidigt genom att välja "2 sides → 2 sides" i kopieringsmenyn. (Glöm inte heller att kopiera i färg om du skrev ut i färg.)
+1. Vik (och eventuellt häfta) dina sånghäften.
+1. Ha en lyckad sittning!
 
 ## Sjungboken
 
@@ -52,7 +61,7 @@ Det finns olika sätt att göra ändringar (ordnat utifrån smidighet):
 
 ## Synka Overleaf med GitHub
 
-Detta projekt är kopplat med ett [Overleaf-projekte](https://www.overleaf.com/read/hfrdcszwfcsy) som behöver synkas manuellt med GitHub vid ändringar.
+Detta projekt är kopplat med ett [Overleaf-projekte](https://www.overleaf.com/read/xndwjtmxmdnz) som behöver synkas manuellt med GitHub vid ändringar.
 
 1. Välj GitHub i sidomenyn och välj _Pull changes from GitHub_ om det finns tillgängliga ändringar.
 
